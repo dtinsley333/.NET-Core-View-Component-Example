@@ -26,7 +26,7 @@ namespace WebApplication1.ViewModels
 
 ```
 
-5. Add a new .cs file called "LatestFileInfo.cs". It will have a public method called "Invoke" which will be called from your view code. 
+5.Add a new .cs file called "LatestFileInfo.cs". It will have a public method called "Invoke" which will be called from your view code. 
 
 
 ```
@@ -60,14 +60,14 @@ namespace WebApplication1.ViewComponents.UserInfo
 }
  ```
  
- 6. Create a view in the Components folder. It can be called default and contain the following code.
+ 6.Create a view in the Components folder. It can be called default and contain the following code.
 
 ```
  @model WebApplication1.ViewModels.LatestFileInfoViewModel
  @Model.FileHistoryDescription
  ```
 
-7. Add the following to the view where you want the component to display:
+7. Add the following to the view where you want the component to display
  
  ```
   @Component.Invoke("LatestFileInfo")
