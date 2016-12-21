@@ -6,10 +6,10 @@ View Component example that retrieves data and displays it inline on a view.
 ###This sample application allows users to upload images, the index page for the uploading needed to display information regarding most recently uploaded file. This data needed to be displayed on othe pages so it made sense to create a view component. 
 
 ##Steps
-1.Create a folder called called "Components" inside the "View" folder for the controller. Example "Views/Documents/Component
-2.Create a folder for your component. "Views/Documents/Documents/Components/LatestFileInfo"
-3.Components consist of two parts. a. A view  and b. A class that hold the logic for your component. 
-4.Create a view model called "LatestFileInfoViewModel.cs"
+1. Create a folder called called "Components" inside the "View" folder for the controller. Example "Views/Documents/Component
+2. Create a folder for your component. "Views/Documents/Documents/Components/LatestFileInfo"
+3. Components consist of two parts. a. A view  and b. A class that hold the logic for your component. 
+4. Create a view model called "LatestFileInfoViewModel.cs"
 ```
 namespace WebApplication1.ViewModels
 {
@@ -58,19 +58,24 @@ namespace WebApplication1.ViewComponents.UserInfo
         }
     }
 }
+
  ```
  
- 6.Create a view in the Components folder. It can be called default and contain the following code.
+ 6 .Create a view in the Components folder. It can be called default and contain the following code.
 
-```
+ ```
+ 
  @model WebApplication1.ViewModels.LatestFileInfoViewModel
  @Model.FileHistoryDescription
+ 
+ 
  ```
 
-7.Add the following to the view where you want the component to display
+7. Add the following to the view where you want the component to display
  
  ```
   @Component.Invoke("LatestFileInfo")
+  
  ```
 
 
