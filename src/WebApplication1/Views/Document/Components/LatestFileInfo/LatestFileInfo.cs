@@ -1,6 +1,5 @@
 ﻿using System;
 using WebApplication1.ViewModels;
-using WebApplication1.ViewModels.Account;
 using System.Linq;
 using Microsoft.AspNet.Mvc;
 using WebApplication1.Models;
