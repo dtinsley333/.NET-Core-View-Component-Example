@@ -9,9 +9,9 @@ View Component example that retrieves data and displays it inline on a view.
 
 
 ##Steps
-1. Create a folder called called "Components" inside the "View" folder for the controller. Example "Views/Documents/Component
+1. Create a folder called called "Components" inside the "View" folder for the controller. Example "Views/Documents/Components
 2. Create a folder for your component. "Views/Documents/Documents/Components/LatestFileInfo"
-3. Components consist of two parts. a. A view  and b. A class that hold the logic for your component. 
+3. View Components consist of two parts. A. A view  and B. A class that holds the logic for your component. 
 4. Create a view model called "LatestFileInfoViewModel.cs"
 ```
 namespace WebApplication1.ViewModels
