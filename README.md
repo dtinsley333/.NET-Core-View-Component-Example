@@ -1,4 +1,4 @@
-# View Component
+# View Component Example
 View Component example that retrieves data and displays it inline on a view.
 
 ###Partials have been replaced in .Net Core with View Components. Partials still work the way they always have with static html but if you are building your UI elements dynamically you will need to use a view component.####
@@ -60,11 +60,13 @@ namespace WebApplication1.ViewComponents.UserInfo
  ```
  
  6. Create a view in the Components folder. It can be called default and contain the following code.
- ```
+
+```
  @model WebApplication1.ViewModels.LatestFileInfoViewModel
  @Model.FileHistoryDescription
  ```
  7. Add the following to the view where you want the component to display:
+ 
  ```
   @Component.Invoke("LatestFileInfo")
  ```
