@@ -1,11 +1,11 @@
 @model WebApplication1.ViewModels.DocumentDetailsViewModel
 
-
+<div class="col-md-11">
+    <span style="padding:20px;">  @Component.Invoke("LatestFileInfo")</span>
+</div>
    
 <h2>Basic Image Upload</h2>
-<div class="col-md-11">
-    @Component.Invoke("LatestFileInfo")
-</div>
+
 
 @using (Html.BeginForm("Index", "Document", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
