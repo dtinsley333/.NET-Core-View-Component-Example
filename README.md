@@ -1,10 +1,9 @@
 # View Component
 View Component example that retrieves data and displays it inline on a view.
 
-###Partials have been replaced in .Net Core with View Components. Partials still work the way they always have with static html but if you 
-are building your UI elements dynamically you will need to use a view component.####
+###Partials have been replaced in .Net Core with View Components. Partials still work the way they always have with static html but if you are building your UI elements dynamically you will need to use a view component.####
 
-### This sample application allows users to upload images, the index page for the uploading needed to display information regarding 
+###This sample application allows users to upload images, the index page for the uploading needed to display information regarding 
 most recently uploaded file. This data needed to be displayed on othe pages so it made sense to create a view component. 
 
 ##Steps
