@@ -1,0 +1,61 @@
+@model WebApplication1.ViewModels.DocumentDetailsViewModel
+
+
+   
+<h2>Basic Image Upload</h2>
+<div class="col-md-11">
+    @Component.Invoke("LatestFileInfo")
+</div>
+
+@using (Html.BeginForm("Index", "Document", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+  
+     <h3>@ViewBag.Message</h3>
+    <label for="file">Image Upload:</label><br />
+    <span asp-validation-for=@Model.Title class="text-danger"></span>
+    <span asp-label-for=@Model.Title>@Model.Title</span>
+    <input asp-for=@Model.Title class="form-control" />
+
+    <input type="file" name="file" id="file" /><br><br>
+    <input type="submit" value="Upload Image" />
+    <br><br>
+    @ViewBag.Message
+    <table class="table">
+        <tr>
+            <th>
+                @Html.Label("Title")
+            </th>
+            <th>
+                @Html.Label("FileName")
+            </th>
+            <th>
+                @Html.Label("Upload Date")
+            </th>
+            <th>
+                @Html.Label("Upload User Id")
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.Documents)
+        {
+            <tr>
+                <td>
+
+                    @Html.ActionLink(item.Title, "FileDownLoad", "Document", new { @documentId = item.DocumentId }, null)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FileName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UploadDate)
+                </td>
+               
+                <td>
+                    @Html.DisplayFor(modelItem => item.UploadUserId)
+                </td>
+            </tr>
+        }
+
+    </table>
+}
