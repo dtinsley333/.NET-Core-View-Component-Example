@@ -1,4 +1,4 @@
-# View Component Example
+# .NET Core View Component Example
 
 ### Partials have been replaced in .Net Core with View Components. Partials still work the way they always have with static html but if you are building your UI elements dynamically you will need to use a view component.####
 This View Component example retrieves data and displays it inline on a view in an asp.net mvc .net core application. You will need Visual Studio 2015 to open the application. The log in information in the database connection string has been blanked out. You will create a view model to hold the data that will be displayed on the view component, a view component class and a view that will behave like a partial view in the days of old. You will invoke the view from the hosting view page. 
